@@ -29,9 +29,8 @@
           $("#skills").text(data.data.attributes.skills);
           // Complete consuming the API data and updating the work and contact sections
           // HINT: look at the above lines, jquery documentation, see what is the object returned
-
-          
-
+          $("#work").text(data.data.attributes.work);
+          $("#contact").text(data.data.attributes.contact);     
      });
   });
   </script>
