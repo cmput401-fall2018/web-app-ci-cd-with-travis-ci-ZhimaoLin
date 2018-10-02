@@ -18,7 +18,7 @@
 
     p {
       color: yellow;
-      font-size: 9vmin;
+      font-size: 5vmin;
     }
   </style>
 
@@ -47,10 +47,13 @@
      });
   });
 
-  //  https://www.w3schools.com/jquery/jquery_animate.asp
+  // https://www.w3schools.com/jquery/jquery_animate.asp
   $(document).ready(function(){
-  $("h1").animate({left: '50px'});
-});
+    for (var i=0; i<10000; i++) {
+      $("#name").animate({fontSize: '9em'}, "slow");
+      $("#name").animate({fontSize: '2em'}, "slow");
+    }
+  });
   </script>
 </body>
 </html>
