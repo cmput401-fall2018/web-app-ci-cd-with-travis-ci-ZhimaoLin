@@ -43,7 +43,7 @@ def test_complicated_function(divide, bad_random):
     divide.return_value = 0
     bad_random.return_value = 0
 
-    result = service.complicated_function()
+    result = service.complicated_function(6)
 
     assert result[0] == 0
     assert result[1] == 0 % 2
