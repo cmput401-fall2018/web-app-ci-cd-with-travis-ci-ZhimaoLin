@@ -29,7 +29,7 @@ def test_divide():
 def test_abs_plus():
     service = Service()
     assert service.abs_plus(5) == 6
-    assert service.abs_plus(-3) == -2
+    assert service.abs_plus(-3) == 4
 
 
 
