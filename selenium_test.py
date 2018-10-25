@@ -25,5 +25,4 @@ def test_home():
     assert elem.text == "Student"
 
     elem = driver.find_element_by_id("contact")
-    assert elem.text != "zhimao@ualberta.ca"
-
+    assert elem.text == "zhimao@ualberta.ca"
