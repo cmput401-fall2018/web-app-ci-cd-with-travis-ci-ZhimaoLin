@@ -38,7 +38,7 @@ def test_abs_plus():
 
     # return abs(x) + 1
 
-def test_complicated_function(x):
+def test_complicated_function():
     # return divide(x), bad_random % 2
     return
 
