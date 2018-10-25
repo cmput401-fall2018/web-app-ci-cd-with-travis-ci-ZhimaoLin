@@ -4,7 +4,7 @@ from selenium.webdriver.common.keys import Keys
 
 def test_home():
     chrome_options = Options()
-    chrome_options.binary_location("./chromedriver")
+    chrome_options.binary_location(".\\chromedriver")
 
     driver = webdriver.Chrome()
 
