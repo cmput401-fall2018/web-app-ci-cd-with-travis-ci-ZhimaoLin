@@ -16,4 +16,4 @@ class Service():
         return abs(x) + 1
 
     def complicated_function(self, x):
-        return self.divide(x), self.bad_random % 2
+        return self.divide(x), self.bad_random() % 2
