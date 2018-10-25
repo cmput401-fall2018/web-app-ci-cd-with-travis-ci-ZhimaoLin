@@ -27,7 +27,3 @@ def test_home():
     elem = driver.find_element_by_id("contact")
     assert elem.text == "zhimao@ualberta.ca"
 
-
-    # assert elem != None
-    # I am a computing science student at u of a.
-    assert True
