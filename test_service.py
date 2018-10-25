@@ -1,4 +1,3 @@
-import random
 from mock import patch
 from service import Service
 
@@ -22,9 +21,8 @@ def test_divide():
     service = Service()
 
     @patch('Service.bad_random')
-    def mock_bad_random():
-        return 0
-
+    def mock_bad_random(bad_random):
+        bad_random.return_value = 0
 
     assert service.divide(5) == 0
 
@@ -45,23 +43,4 @@ def test_abs_plus():
 def test_complicated_function(x):
     # return divide(x), bad_random % 2
     return
-
-
-    # elem = driver.find_element_by_id("name")
-    # assert elem.text == "Zhimao Lin"
-    #
-    # elem = driver.find_element_by_id("about")
-    # assert elem.text == "I am a computing science student at u of a."
-    #
-    # elem = driver.find_element_by_id("education")
-    # assert elem.text == "University of Alberta"
-    #
-    # elem = driver.find_element_by_id("skills")
-    # assert elem.text == "Programming"
-    #
-    # elem = driver.find_element_by_id("work")
-    # assert elem.text == "Student"
-    #
-    # elem = driver.find_element_by_id("contact")
-    # assert elem.text == "zhimao@ualberta.ca"
 
