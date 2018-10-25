@@ -17,13 +17,11 @@ def test_bad_random():
     # return random.randint(0, len(numberStrings)-1)
     return
 
-def test_divide():
+@patch('Service.bad_random')
+def test_divide(bad_random):
+    bad_random.return_value = 0
+
     service = Service()
-
-    @patch('Service.bad_random')
-    def mock_bad_random():
-        return 0
-
     assert service.divide(5) == 0
 
 
