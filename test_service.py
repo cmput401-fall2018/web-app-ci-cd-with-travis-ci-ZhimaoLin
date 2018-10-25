@@ -21,8 +21,8 @@ def test_divide():
     service = Service()
 
     @patch('Service.bad_random')
-    def mock_bad_random(bad_random):
-        bad_random.return_value = 0
+    def mock_bad_random():
+        return 0
 
     assert service.divide(5) == 0
 
