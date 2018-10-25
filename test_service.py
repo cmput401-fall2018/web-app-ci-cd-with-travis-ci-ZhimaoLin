@@ -46,7 +46,7 @@ def test_complicated_function(divide, bad_random):
     result = service.complicated_function(6)
 
     assert result[0] == 0
-    assert result[1] == 0 % 2
+    assert result[1] == 0
 
     # return divide(x), bad_random % 2
     return
