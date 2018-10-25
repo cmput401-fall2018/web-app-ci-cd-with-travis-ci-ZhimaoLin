@@ -1,7 +1,5 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.keys import Keys
-
+import random
+from mock import patch
 from service import Service
 
 # def test_bad_random():
@@ -21,7 +19,14 @@ def test_bad_random():
     return
 
 def test_divide():
-    return
+    service = Service()
+
+    @patch('Service.bad_random')
+    def mock_bad_random():
+        return 0
+
+
+    assert service.divide(5) == 0
 
 
     # return self.bad_random() / y
