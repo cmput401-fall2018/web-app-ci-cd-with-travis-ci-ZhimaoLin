@@ -18,7 +18,7 @@ def test_bad_random():
     return
 
 
-@patch('service.bad_random')
+@patch('service.Service.bad_random')
 def test_divide(bad_random):
     bad_random.return_value = 0
 
