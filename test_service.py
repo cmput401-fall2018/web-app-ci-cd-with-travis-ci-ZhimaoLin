@@ -42,11 +42,15 @@ def test_complicated_function(divide, bad_random):
 
     divide.return_value = 0
     bad_random.return_value = 0
-
     result = service.complicated_function(6)
-
     assert result[0] == 0
     assert result[1] == 0
+
+    divide.return_value = 6
+    bad_random.return_value = 7
+    result = service.complicated_function(6)
+    assert result[0] == 6
+    assert result[1] == 7 % 2
 
     # return divide(x), bad_random % 2
     return
