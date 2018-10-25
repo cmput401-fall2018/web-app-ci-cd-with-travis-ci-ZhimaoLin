@@ -20,13 +20,14 @@ def test_bad_random():
 
 @patch('service.Service.bad_random')
 def test_divide(bad_random):
-    bad_random.return_value = 0
-
     service = Service()
+
+    bad_random.return_value = 0
     assert service.divide(5) == 0
 
+    bad_random.return_value = 6
+    assert service.divide(3) == 2
 
-    # return self.bad_random() / y
 
 def test_abs_plus():
     service = Service()
@@ -34,12 +35,17 @@ def test_abs_plus():
     assert service.abs_plus(-3) == 4
 
 
+@patch('service.Service.divide')
+@patch('service.Service.bad_random')
+def test_complicated_function(divide, bad_random):
+    service = Service()
 
+    divide.return_value = 0
+    bad_random.return_value = 0
 
+    assert service.complicated_function()[0] == 0
+    assert service.complicated_function()[1] == 0 % 2
 
-    # return abs(x) + 1
-
-def test_complicated_function():
     # return divide(x), bad_random % 2
     return
 
