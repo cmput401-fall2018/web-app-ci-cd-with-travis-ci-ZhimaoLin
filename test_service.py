@@ -3,12 +3,10 @@ import io
 from service import Service
 
 
-@patch('io.open')
-@patch('io.FileIO.readlines')
 def test_bad_random():
-    io.open.return_value = 0
-    io.FileIO.readlines.return_value = '123456'
-
+    file = open('/Users/dchui1/datafile', 'w+')
+    file.write('testfile\n')
+    file.close()
     service = Service()
     result = service.bad_random()
 
