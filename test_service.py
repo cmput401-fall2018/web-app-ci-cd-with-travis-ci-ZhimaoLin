@@ -1,16 +1,20 @@
 from mock import patch
+import io
 from service import Service
 
-# def test_bad_random():
-#     chrome_options = Options()
-#     chrome_options.binary_location = "web-app-ci-cd-with-travis-ci-ZhimaoLin/chromedriver"
-#
-#     driver = webdriver.Chrome()
-#     driver.get("http://162.246.157.223:8000")
 
-
-
+@patch('io.open')
+@patch('io.FileIO.readlines')
 def test_bad_random():
+    io.open.return_value = 0
+    io.FileIO.readlines.return_value = '123456'
+
+    service = Service()
+    result = service.bad_random()
+
+    assert result >= 0
+    assert result < 5
+
     # file = open('/Users/dchui1/datafile', 'r')
     # numberStrings = file.readlines()
     # numbers = [int(x) for x in numberStrings]
