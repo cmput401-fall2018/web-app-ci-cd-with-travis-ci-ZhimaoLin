@@ -1,17 +1,9 @@
 from mock import patch
-import os
 from service import Service
 
 
+@patch('builtins.open')
 def test_bad_random():
-    filename = '/Users/dchui1/datafile'
-    os.makedirs(os.path.dirname(filename), exist_ok=True)
-
-
-    
-    file = open('/Users/dchui1/datafile', 'w+')
-    file.write('testfile\n')
-    file.close()
     service = Service()
     result = service.bad_random()
 
