@@ -13,16 +13,25 @@ def test_bad_random(bad_random):
 def test_divide(bad_random):
     service = Service()
 
+    # Test 0 / x
     bad_random.return_value = 0
     assert service.divide(5) == 0
 
+    # Test y / x such that y > 0
     bad_random.return_value = 6
     assert service.divide(3) == 2
 
 
 def test_abs_plus():
     service = Service()
+
+    # Test x > 0
     assert service.abs_plus(5) == 6
+
+    # Test x = 0
+    assert service.abs_plus(0) == 1
+
+    # Test x < 0
     assert service.abs_plus(-3) == 4
 
 
