@@ -8,6 +8,12 @@ def test_bad_random(bad_random):
     bad_random.return_value = 0
     assert service.bad_random() == 0
 
+    bad_random.return_value = 5
+    assert service.bad_random() == 5
+
+    bad_random.return_value = 100
+    assert service.bad_random() == 100
+
 
 @patch('service.Service.bad_random')
 def test_divide(bad_random):
