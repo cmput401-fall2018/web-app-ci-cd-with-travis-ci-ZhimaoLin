@@ -2,19 +2,11 @@ from mock import patch
 from service import Service
 
 
-@patch('builtins.open')
-def test_bad_random():
+@patch('service.Service.bad_random')
+def test_bad_random(bad_random):
     service = Service()
-    result = service.bad_random()
-
-    assert result >= 0
-    assert result < 5
-
-    # file = open('/Users/dchui1/datafile', 'r')
-    # numberStrings = file.readlines()
-    # numbers = [int(x) for x in numberStrings]
-    # return random.randint(0, len(numberStrings)-1)
-    return
+    bad_random.return_value = 0
+    assert service.bad_random() == 0
 
 
 @patch('service.Service.bad_random')
