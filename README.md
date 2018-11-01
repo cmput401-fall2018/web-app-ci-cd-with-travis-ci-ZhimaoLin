@@ -4,6 +4,12 @@ Zhimao
 162.246.157.223:8000
 
 <br>
-run unit test 
+# Instruction 
 
-``pytest -v ./test_service.py``
+## Part 1
+``pytest -v ./selenium_test.py
+``
+
+## Part 2
+``pytest -v ./test_service.py
+``

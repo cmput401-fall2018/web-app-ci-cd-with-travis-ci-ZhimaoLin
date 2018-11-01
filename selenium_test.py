@@ -5,7 +5,6 @@ from selenium.webdriver.common.keys import Keys
 def test_home():
     chrome_options = Options()
     chrome_options.binary_location = "web-app-ci-cd-with-travis-ci-ZhimaoLin/chromedriver"
-
     driver = webdriver.Chrome()
 
     driver.get("http://162.246.157.223:8000")
