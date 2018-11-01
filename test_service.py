@@ -5,6 +5,10 @@ from service import Service
 @patch('service.Service.bad_random')
 def test_bad_random(bad_random):
     service = Service()
+
+    bad_random.return_value = 0
+    assert service.bad_random() == 0
+
     bad_random.return_value = 10
     assert service.bad_random() == 10
 
