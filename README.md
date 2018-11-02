@@ -13,5 +13,3 @@ Zhimao
 ## Part 2
 ``pytest ./test_service.py
 ``
-## Result
-![]()
