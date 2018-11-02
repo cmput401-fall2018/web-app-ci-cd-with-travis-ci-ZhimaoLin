@@ -7,7 +7,6 @@ def test_home():
     option = Options()
     option.add_argument("headless")
     driverPath = os.getcwd() + '/chromedriver'
-    print('+++++++++++'+driverPath)
     driver = webdriver.Chrome(driverPath, options=option)
 
     driver.get("http://162.246.157.223:8000")
