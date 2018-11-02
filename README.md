@@ -7,9 +7,11 @@ Zhimao
 # Instruction 
 
 ## Part 1
-``pytest -v ./selenium_test.py
+``pytest ./selenium_test.py
 ``
 
 ## Part 2
-``pytest -v ./test_service.py
+``pytest ./test_service.py
 ``
+## Result
+![]()
