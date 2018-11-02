@@ -4,3 +4,4 @@
 * https://www.tutorialspoint.com/python3/python_files_io.htm
 * https://stackoverflow.com/questions/1289894/how-do-i-mock-an-open-used-in-a-with-statement-using-the-mock-framework-in-pyth
 * https://pythonspot.com/category/selenium/
+* https://stackoverflow.com/questions/28307469/chrome-driver-needs-to-be-available-in-the-path-error-on-mac
